@@ -23,11 +23,11 @@ document.body.appendChild(newDiv);
                         email: 'test@gmail.com',
                         token:obj.token,
                     };
-
+ console.log(formData);
                     // Convert the data object to JSON
                     const jsonData = JSON.stringify(formData);
 
-             fetch("http://app.ihsancrm.com//api/web/instance", {
+             fetch("http://app.ihsancrm.com/api/web/instance", {
                             method: "POST",
                             headers: {
                                 "Content-Type": "application/json",
@@ -210,7 +210,7 @@ function closeTabsofModal() {
                     postMessageToUser(200, messagetobesned.value,0,sessionStorage.getItem("AUTHDIVIH"));
                     messagetobesned.value='';
                     // Make a POST request to your API
-                    fetch("http://app.ihsancrm.com//api/web/message", {
+                    fetch("http://app.ihsancrm.com/api/web/message", {
                             method: "POST",
                             headers: {
                                 "Content-Type": "application/json",
