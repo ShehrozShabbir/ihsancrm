@@ -13,7 +13,7 @@ document.body.appendChild(newDiv);
     sessionStorage.setItem('AUTHDIVIH', nameDiv);
 
     if (document.getElementById(nameDiv)) {
-        let buttonOfIhsanDiv=`<a class="formModal_btn"><img src="http://app.ihsancrm.com/public/web/message-logo.svg" alt="" style="width: 35px;"></a>    <div  class="ihsanAi-modal" >
+        let buttonOfIhsanDiv=`<a class="formModal_btn"><img src="http://webai.ihsancrm.com/public/web/message-logo.svg" alt="" style="width: 35px;"></a>    <div  class="ihsanAi-modal" >
 <div class="content"> hi </div></div>`;
         document.getElementById(nameDiv).innerHTML =buttonOfIhsanDiv;
 
@@ -27,7 +27,7 @@ document.body.appendChild(newDiv);
                     // Convert the data object to JSON
                     const jsonData = JSON.stringify(formData);
 
-             fetch("http://app.ihsancrm.com/api/web/instance", {
+             fetch("http://webai.ihsancrm.com/api/web/instance", {
                             method: "POST",
                             headers: {
                                 "Content-Type": "application/json",
@@ -101,7 +101,7 @@ function getCHATBrows(name, question,logo,nameDiv) {
     return (`
     <div class="top-content">
         <div>
-             <img src="http://app.ihsancrm.com/public/web/chat-image.svg" alt="not-Show"/>
+             <img src="http://webai.ihsancrm.com/public/web/chat-image.svg" alt="not-Show"/>
         </div>
         <div style="padding-left: 20px;">
             <h2>` + name + `</h2>
@@ -128,7 +128,7 @@ function getCHATBrows(name, question,logo,nameDiv) {
             <div style="display: flex; justify-content: center; padding: 10px 0px;">
                 <textarea class="type_message scrollbar" name=""
                     placeholder="Type your message here..."></textarea>
-                <button onclick="ihsanCRMWebAiForm()" class="send-message" type="button"><img src="http://app.ihsancrm.com/public/web/send-msg.svg" alt=""></button>
+                <button onclick="ihsanCRMWebAiForm()" class="send-message" type="button"><img src="http://webai.ihsancrm.com/public/web/send-msg.svg" alt=""></button>
             </div>
         </form>
     </div>
@@ -210,7 +210,7 @@ function closeTabsofModal() {
                     postMessageToUser(200, messagetobesned.value,0,sessionStorage.getItem("AUTHDIVIH"));
                     messagetobesned.value='';
                     // Make a POST request to your API
-                    fetch("http://app.ihsancrm.com/api/web/message", {
+                    fetch("http://webai.ihsancrm.com/api/web/message", {
                             method: "POST",
                             headers: {
                                 "Content-Type": "application/json",
